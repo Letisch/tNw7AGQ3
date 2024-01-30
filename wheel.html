@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./monarch-butterfly.ico">
+    <title>Roda da Vida</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+    <link href="./main.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h2>Roda da vida</h2>
+    </header>
+    <section class="wheel-of-life">
+        <div class="chart">
+            <canvas id="roda-da-vida" width="200" height="200"></canvas>
+        </div>
+    </section>
+
+    <section class="categories">
+
+        <div class="category life">
+            <h3 class="no-span">Qualidade de Vida</h3>
+            <div class="options">
+                <div class="aspect">
+                    <p class="title">Hobbies e Diversão:</p>
+                    <div id="hobbies-ratings">
+                    </div>
+                    <div class="description">
+                        <p>Avalie quão satisfeito você está com as atividades que realiza em seu tempo livre. Isso pode
+                            incluir hobbies, interesses pessoais e atividades de lazer que trazem alegria e diversão à
+                            sua vida.</p>
+                    </div>
+                </div>
+                <div class="aspect">
+                    <p class="title">Plenitude e Felicidade:</p>
+                    <div id="plenitude-ratings">
+                    </div>
+                    <div class="description">
+                        <p>Reflita sobre o seu nível geral de satisfação e contentamento na vida. Considere os aspectos
+                            que contribuem para sua sensação de plenitude e felicidade, como realizações pessoais,
+                            relacionamentos significativos e experiências positivas.</p>
+                    </div>
+                </div>
+                <div class="aspect">
+                    <p class="title">Espiritualidade:</p>
+                    <div id="espiritualidade-ratings">
+                    </div>
+                    <div class="description">
+                        <p>Avalie sua conexão com questões espirituais, transcendentais ou de significado mais profundo.
+                            Isso pode incluir práticas religiosas, meditação, reflexão pessoal ou uma sensação de
+                            propósito e significado na vida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category personal">
+            <h3 class="no-span">&nbsp;&nbsp; Pessoal &nbsp;&nbsp;</h3>
+            <div class="options">
+                <div class="aspect">
+                    <p class="title">Saúde e disposição:</p>
+                    <div id="saude-ratings">
+                    </div>
+                    <div class="description">
+                        <p>Avalie quão satisfeito você está com as atividades que realiza em seu tempo livre. Isso pode
+                            incluir hobbies, interesses pessoais e atividades de lazer que trazem alegria e diversão à
+                            sua vida.</p>
+                    </div>
+                </div>
+                <div class="aspect">
+                    <p class="title">Desenvolvimento intelectual:</p>
+                    <div id="desenvolvimento-ratings">
+                    </div>
+                    <div class="description">
+                        <p>Reflita sobre o seu nível geral de satisfação e contentamento na vida. Considere os aspectos
+                            que contribuem para sua sensação de plenitude e felicidade, como realizações pessoais,
+                            relacionamentos significativos e experiências positivas.</p>
+                    </div>
+                </div>
+                <div class="aspect">
+                    <p class="title">Equilíbrio emocional:</p>
+                    <div id="equilibrio-ratings">
+                    </div>
+                    <div class="description">
+                        <p>Avalie sua conexão com questões espirituais, transcendentais ou de significado mais profundo.
+                            Isso pode incluir práticas religiosas, meditação, reflexão pessoal ou uma sensação de
+                            propósito e significado na vida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category profissinal">
+            <h3 class="no-span">Profissional</h3>
+            <div class="options">
+                <div class="aspect">
+                    <p class="title">Contribuição social:</p>
+                    <div id="contribuicao-ratings">
+                    </div>
+                    <div class="description">
+                        <p>Reflita sobre como você contribui para a comunidade e o mundo ao seu redor. Isso pode incluir
+                            trabalho voluntário, ativismo, apoio a causas sociais e ajudar os outros de maneiras
+                            significativas.</p>
+                    </div>
+                </div>
+                <div class="aspect">
+                    <p class="title">Recursos financeiros:</p>
+                    <div id="recursos-ratings">
+                    </div>
+                    <div class="description">
+                        <p>Avalie sua situação financeira atual e sua capacidade de gerenciar eficazmente seus recursos
+                            financeiros. Considere suas metas financeiras, hábitos de gastos, planejamento financeiro e
+                            segurança financeira.</p>
+                    </div>
+                </div>
+                <div class="aspect">
+                    <p class="title">Realização e propósito:</p>
+                    <div id="realizacao-ratings">
+                    </div>
+                    <div class="description">
+                        <p>Reflita sobre sua sensação de realização pessoal e alinhamento com seus valores e objetivos
+                            de vida. Considere se você está vivendo de acordo com seu propósito e se sentindo realizado
+                            em suas atividades e realizações.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category relation">
+            <h3 class="no-span">Relacionamentos</h3>
+            <div class="options">
+                <div class="aspect">
+                    <p class="title">vida social:</p>
+                    <div id="vida-ratings">
+                    </div>
+                    <div class="description">
+                        <p>Avalie a qualidade e a quantidade de suas interações sociais e relacionamentos pessoais.
+                            Considere seu círculo social, níveis de apoio social e conexões significativas com os
+                            outros.</p>
+                    </div>
+                </div>
+                <div class="aspect">
+                    <p class="title">Relacionamento amoroso:</p>
+                    <div id="relacionamento-ratings">
+                    </div>
+                    <div class="description">
+                        <p>Reflita sobre a qualidade e a satisfação de seu relacionamento romântico, se aplicável.
+                            Considere a comunicação, intimidade, apoio mútuo e satisfação emocional em seu
+                            relacionamento amoroso.</p>
+                    </div>
+                </div>
+                <div class="aspect">
+                    <p class="title">Família:</p>
+                    <div id="familia-ratings">
+                    </div>
+                    <div class="description">
+                        <p>Avalie a qualidade e a dinâmica de seus relacionamentos familiares. Considere o apoio,
+                            comunicação, proximidade e conexão emocional com os membros de sua família.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <label for="rangeInput">Selecione um valor de 0 a 10:</label>
+        <input type="range" id="rangeInput" name="rangeInput" min="0" max="10" step="1" value="0">
+        <output for="rangeInput" id="output">5</output> -->
+    </section>
+
+    <footer>
+        <p>© 2024 - Todos os Direitos Reservados. Desenvolvido por Letícia Schneider.</p>
+        <div class="social">
+
+            <a href="https://www.instagram.com/leeticiaschneider/" target="_blank">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="" stroke="none">
+                        <path d="M1218 5109 c-167 -20 -364 -85 -514 -170 -388 -223 -644 -611 -693
+                        -1052 -15 -133 -15 -2521 0 -2654 71 -643 579 -1151 1222 -1222 133 -15 2521
+                        -15 2654 0 643 71 1151 579 1222 1222 15 133 15 2521 0 2654 -71 643 -579
+                        1151 -1222 1222 -118 13 -2554 13 -2669 0z m2773 -321 c208 -57 368 -148 508
+                        -289 141 -140 232 -300 290 -508 l26 -96 0 -1335 0 -1335 -26 -96 c-58 -208
+                        -149 -368 -290 -508 -140 -141 -300 -232 -508 -290 l-96 -26 -1335 0 -1335 0
+                        -96 26 c-208 58 -368 149 -508 290 -141 140 -232 300 -290 508 l-26 96 0 1335
+                        0 1335 26 96 c58 208 149 368 289 508 166 166 385 276 615 310 33 5 645 8
+                        1360 7 l1300 -1 96 -27z" />
+                        <path d="M3945 4453 c-244 -34 -410 -271 -351 -501 41 -163 145 -266 307 -308
+                        275 -70 545 179 499 460 -25 157 -140 289 -290 334 -44 13 -125 20 -165 15z
+                        m112 -319 c54 -34 63 -117 18 -164 -37 -38 -82 -47 -128 -25 -70 33 -85 125
+                        -29 177 41 39 89 43 139 12z" />
+                        <path d="M2367 3945 c-553 -76 -1020 -492 -1161 -1037 -124 -477 15 -981 368
+                        -1334 550 -550 1422 -550 1972 0 550 550 550 1422 0 1972 -316 315 -739 459
+                        -1179 399z m353 -300 c240 -36 444 -139 615 -310 431 -430 431 -1120 0 -1550
+                        -430 -431 -1120 -431 -1550 0 -431 430 -431 1120 0 1550 249 249 591 363 935
+                        310z" />
+                    </g>
+                </svg>
+            </a>
+
+            <a href="https://www.tiktok.com/@leehschneider" target="_blank">
+                <svg version="1.0" width="20" height="20"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="" stroke="none">
+                        <path d="M2321 5110 c-1340 -130 -2361 -1283 -2318 -2620 13 -389 97 -726 268
+                        -1069 249 -502 647 -900 1150 -1150 815 -406 1779 -350 2539 147 297 194 579
+                        482 771 788 74 116 184 342 234 478 51 138 110 376 131 531 23 157 26 521 6
+                        660 -59 415 -191 769 -410 1099 -92 140 -185 254 -315 385 -399 403 -895 653
+                        -1462 737 -122 18 -466 26 -594 14z m786 -1301 c48 -222 160 -379 326 -458 85
+                        -41 190 -71 245 -71 l32 0 0 -220 0 -220 -57 0 c-139 0 -283 41 -448 126 -58
+                        30 -108 54 -111 54 -2 0 -2 -96 2 -212 7 -272 -10 -780 -30 -868 -50 -217
+                        -163 -404 -324 -531 -319 -255 -711 -261 -1020 -17 -123 98 -235 277 -283 453
+                        -27 100 -37 316 -19 408 57 291 291 546 584 636 80 25 231 51 294 51 l42 0 0
+                        -224 0 -224 -72 -17 c-244 -59 -352 -135 -409 -284 -30 -81 -24 -204 15 -281
+                        83 -164 218 -246 394 -238 181 7 291 103 354 308 l23 75 3 928 3 927 217 0
+                        217 0 22 -101z" />
+                    </g>
+                </svg>
+            </a>
+
+        </div>
+    </footer>
+    <!-- <canvas id="roda-da-vida" width="400" height="400"></canvas> -->
+    <!-- <button id="btnGerarPDF">Gerar PDF</button> -->
+
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+
+</html>

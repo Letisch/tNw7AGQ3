@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #F0F0F0
+}
+
+header {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.wheel-of-life {
+    margin: 0 auto;
+}
+
+.chart {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.categories {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category {
+    margin-top: 80px;
+}
+
+.category .options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    /* Ou a largura que desejar dividida pelo número de itens */
+    gap: 40px;
+}
+
+.category h3 {
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.category h3.no-span {
+    display: table;
+    white-space: nowrap;
+}
+
+.category h3.no-span:before,
+.category h3.no-span:after {
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 0.5em;
+    width: 45%;
+}
+
+.category.life h3.no-span:before,
+.category.life h3.no-span:after {
+    border-top: 1px solid #7ea34b;
+}
+
+.category.personal h3.no-span:before,
+.category.personal h3.no-span:after {
+    border-top: 1px solid #F4A8AA;
+}
+
+.category.profissinal h3.no-span:before,
+.category.profissinal h3.no-span:after {
+    border-top: 1px solid #57b8f0;
+}
+
+.category.relation h3.no-span:before,
+.category.relation h3.no-span:after {
+    border-top: 1px solid #C6AAD2;
+}
+
+.category h3.no-span:before {
+    right: 1.5%;
+}
+
+.category h3.no-span:after {
+    left: 1.5%;
+}
+
+.category .options .aspect {
+    padding: 0 20px;
+}
+
+.category .options .aspect .title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.category .options .aspect .description {
+    line-height: 26px;
+    text-align: justify;
+}
+
+.rating-button {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.life .rating-button.active,
+.life .rating-button.active:hover {
+    background-color: #7ea34b;
+}
+
+.personal .rating-button.active,
+.personal .rating-button.active:hover {
+    background-color: #F4A8AA;
+}
+
+.profissinal .rating-button.active,
+.profissinal .rating-button.active:hover {
+    background-color: #57b8f0;
+}
+
+.relation .rating-button.active,
+.relation .rating-button.active:hover {
+    background-color: #C6AAD2;
+}
+
+.rating-button:hover {
+    background-color: #ddd;
+}
+
+footer {
+    background-color: #D3CAC1;
+    margin-top: 150px;
+    padding: 40px;
+    text-align: center;
+}
+
+footer .social {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    width: 64px;
+    margin: 0 auto;
+}
+
+footer .social a {
+    cursor: pointer;
+}
+
+footer .social svg g:hover {
+    fill: #66625d;
+}

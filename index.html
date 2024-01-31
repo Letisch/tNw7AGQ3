@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./monarch-butterfly.ico">
+    <link rel="shortcut icon" href="monarch-butterfly.ico">
     <title>Roda da Vida</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
-    <link href="./main.css" rel="stylesheet">
+
+    <script src="./assets/js/html2canvas.js"></script>
+
+    <link href="./assets/css/main.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <h2>Roda da vida</h2>
+        <button class="button-61" role="button" id="gerarImagem">Gerar Imagem</button>
     </header>
     <section class="wheel-of-life">
         <div class="chart">
@@ -166,10 +170,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- <label for="rangeInput">Selecione um valor de 0 a 10:</label>
-        <input type="range" id="rangeInput" name="rangeInput" min="0" max="10" step="1" value="0">
-        <output for="rangeInput" id="output">5</output> -->
     </section>
 
     <footer>
@@ -204,8 +204,8 @@
             </a>
 
             <a href="https://www.tiktok.com/@leehschneider" target="_blank">
-                <svg version="1.0" width="20" height="20"
-                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+                <svg version="1.0" width="20" height="20" viewBox="0 0 512.000000 512.000000"
+                    preserveAspectRatio="xMidYMid meet">
 
                     <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="" stroke="none">
                         <path d="M2321 5110 c-1340 -130 -2361 -1283 -2318 -2620 13 -389 97 -726 268
@@ -226,10 +226,8 @@
 
         </div>
     </footer>
-    <!-- <canvas id="roda-da-vida" width="400" height="400"></canvas> -->
-    <!-- <button id="btnGerarPDF">Gerar PDF</button> -->
 
-    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
 </body>
 
 </html>

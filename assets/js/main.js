@@ -151,3 +151,32 @@ createButtons("realizacao", 8);
 createButtons("vida", 9);
 createButtons("relacionamento", 10);
 createButtons("familia", 11);
+
+
+// document.getElementById('gerarPDF').addEventListener('click', function() {
+//     var element = document.querySelector('.wheel-of-life');
+
+//     var options = {
+//         filename: 'roda_da_vida.pdf', // Define o nome do arquivo PDF
+//         image: { type: 'jpeg', quality: 0.98 }, // Configurações para imagem
+//         html2canvas: { scale: 2 }, // Configurações para HTML2Canvas
+//         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }, // Configurações para jsPDF
+//         backgroundColor: '#F0F0F0' // Define a cor de fundo do PDF
+//     };
+
+//     html2pdf().set(options).from(element).save();
+// });
+
+
+document.getElementById('gerarImagem').addEventListener('click', function() {
+  var container = document.querySelector('.wheel-of-life');
+    
+  html2canvas(container, { allowTaint: true }).then(function (canvas) {
+        var link = document.createElement("a");
+        document.body.appendChild(link);
+        link.download = "roda_da_vida.jpg";
+        link.href = canvas.toDataURL();
+        link.target = '_blank';
+        link.click();
+    });
+});
